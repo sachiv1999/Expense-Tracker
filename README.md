@@ -1,11 +1,17 @@
 # Expense-Tracker
 
 **COMPNY** : CODTECH IT SOLUTIONS
+
 **NAME** : SACHIV CHAPADIYA
+
 **INTERN ID** : CT12DR543
+
 **DOMAIN** : ANDROID DEVELOPER
+
 **DURATION** : 12 WEEK
+
 **MENTOR** : NEELA SANTOSH
+
 **DESCRIPTION** : The Expense Tracker App is a powerful yet easy-to-use financial management tool designed to help users take full control of their personal and business finances. It enables users to record, track, and analyze their expenses and income effortlessly — all in one intuitive and visually appealing interface. Whether you are a student managing monthly allowances, a professional monitoring daily expenses, or a small business owner keeping track of financial transactions, this app is the perfect companion for achieving smarter money management and better financial discipline.
 
 At its core, the Expense Tracker App provides a simple and efficient way to record every transaction. Users can quickly add income or expenses with details such as category, amount and date. The app supports multiple categories — such as Food, Transport, Bills, Entertainment, Shopping and more — allowing for an organized and detailed view of spending patterns. With its custom category feature, users can even personalize categories to suit their unique financial habits.
