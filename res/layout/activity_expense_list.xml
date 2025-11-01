@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E3F2FD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#E3F2FD"
+            android:paddingLeft="20dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_list"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="8dp"/>
+
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/spinnerFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/rounded_edittext"
+        android:padding="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:paddingTop="8dp"
+        >
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableLayoutExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_border"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:background="@drawable/table_border">
+                    <TextView
+                        android:text="@string/name"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:textColor="#2196F3"/>
+                    <TextView
+                        android:text="@string/amount"
+                        android:padding="8dp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:text="@string/category"
+                        android:padding="8dp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:text="@string/date"
+                        android:padding="8dp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"/>
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvTotalExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: ₹0.00"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="end"
+        android:padding="8dp"
+        android:textColor="#2196F3" />
+</LinearLayout>
