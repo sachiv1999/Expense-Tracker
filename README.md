@@ -21,3 +21,4 @@ The dashboard offers an instant overview of the user’s financial status. It in
 A standout feature of the Expense Tracker App is its budget planner. Users can set monthly budgets for specific categories, and the app provides real-time alerts when they are close to exceeding those limits. This proactive approach helps prevent overspending and encourages mindful spending habits. The search and filter tools make it easy to locate past transactions, view spending by category, or analyze income sources.
 
 **OUTPUT** :
+https://github.com/sachiv1999/Expense-Tracker/issues/1#issue-3578080497
