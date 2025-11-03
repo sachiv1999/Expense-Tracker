@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Expense</string>
+    <string name="category">Category</string>
+    <string name="date_yyyy_mm_dd">Date (YYYY-MM-DD)</string>
+    <string name="expense_name">Expense Name</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="amount">Amount</string>
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="view_expense_graph">View Expense Graph</string>
+    <string name="view_expense_history">View Expense History</string>
+    <string name="expense_tracker">Expense Tracker</string>
+    <string name="expense_list">Expense List</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
