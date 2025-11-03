@@ -2,119 +2,128 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#E3F2FD"
+    app:layout_constraintBottom_toTopOf="@id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
         android:background="#E3F2FD"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:paddingBottom="30dp">
+            android:background="#fff"
+            android:padding="20dp">
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/expense_tracker"
-            android:textSize="35sp"
+            android:textSize="40sp"
+            android:textStyle="bold"
             android:textColor="@color/blue"
             android:paddingRight="20dp"/>
 
+<!--            <ImageButton-->
+<!--                app:srcCompat="@drawable/ic_menu"-->
+<!--                android:id="@+id/menu"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:paddingLeft="10dp"-->
+<!--                />-->
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E3F2FD"
+            android:paddingTop="30dp"
+            android:paddingBottom="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="580dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expense Add"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/etExpenseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:hint="@string/expense_name"
+                android:inputType="text"
+                android:autofillHints="0"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:hint="@string/amount"
+                android:textSize="20sp"
+                android:autofillHints="0"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="0"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"
+                android:inputType="text"
+                android:hint="@string/category" />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:autofillHints="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"
+                android:inputType="date"
+                android:hint="@string/date_yyyy_mm_dd" />
+
+            <Button
+                android:id="@+id/btnAddExpense"
+                android:autofillHints="0"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue"
+                android:text="@string/add_expense" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:backgroundTint="#E3F2FD"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
 
     </LinearLayout>
-    
-
-    <EditText
-        android:id="@+id/etAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/amount"
-        android:textSize="20sp"
-        android:autofillHints="0"
-        android:inputType="numberDecimal" />
-
-    <EditText
-        android:id="@+id/etCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="0"
-        android:textSize="20sp"
-        android:inputType="text"
-        android:hint="@string/category" />
-
-    <EditText
-        android:id="@+id/etDate"
-        android:autofillHints="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:inputType="date"
-        android:hint="@string/date_yyyy_mm_dd" />
-
-    <Button
-        android:id="@+id/btnAddExpense"
-        android:autofillHints="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:text="@string/add_expense" />
-
-    <TableLayout
-            android:id="@+id/tableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*"
-            android:shrinkColumns="*"
-            android:background="@drawable/table_border"
-            android:layout_marginTop="16dp">
-
-            <TableRow
-                android:background="@drawable/table_border">
-                <TextView
-                    android:text="@string/name"
-                    android:textStyle="bold"
-                    android:textColor="@color/blue"
-                     />
-                <TextView
-                    android:text="@string/amount"
-                    android:textStyle="bold"
-                    android:textColor="@color/blue" />
-                <TextView
-                    android:text="@string/category"
-                    android:textStyle="bold"
-                    android:textColor="@color/blue"/>
-                <TextView
-                    android:text="@string/date"
-                    android:textStyle="bold"
-                    android:textColor="@color/blue"/>
-            </TableRow>
-    </TableLayout>
-
-     <Button
-            android:id="@+id/btnHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/view_expense_history"
-            android:backgroundTint="@color/blue"
-            android:layout_marginTop="12dp" />
-
-    <Button
-            android:id="@+id/graph"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/view_expense_graph"
-            android:backgroundTint="@color/blue"
-            android:layout_marginTop="12dp" />
-
-</LinearLayout>
 
 
-</ScrollView>  
+</ScrollView>
