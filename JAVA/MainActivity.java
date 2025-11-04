@@ -13,13 +13,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText etExpenseName, etAmount, etCategory, etDate;
     Button btnAddExpense ;
-    
+
     DBHelper dbHelper;
 
 
@@ -42,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.fragment_container, fragment);
         transaction.commit();
 
-        dbHelper = new DBHelper(this);
-       
+
+
+            dbHelper = new DBHelper(this);
+
 
         btnAddExpense.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     etAmount.setText("");
                     etCategory.setText("");
                     etDate.setText("");
-                    
+
                 } else {
                     Toast.makeText(MainActivity.this, "Failed to add expense", Toast.LENGTH_SHORT).show();
                 }
