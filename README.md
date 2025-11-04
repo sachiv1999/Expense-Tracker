@@ -22,3 +22,4 @@ A standout feature of the Expense Tracker App is its budget planner. Users can s
 
 **OUTPUT** :
 https://github.com/sachiv1999/Expense-Tracker/issues/1#issue-3578080497
+https://github.com/sachiv1999/Expense-Tracker/issues/2#issue-3585564047
