@@ -3,86 +3,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E3F2FD"
+    app:layout_constraintBottom_toTopOf="@id/fragment_container"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="20dp"
         android:background="#E3F2FD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:padding="20dp">
+
 
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#E3F2FD"
-                android:paddingLeft="20dp"
-                android:paddingBottom="8dp"
-                app:srcCompat="@drawable/ic_back" />
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#fff"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit Expense"
-                android:textSize="30sp"
+                android:text="Expense Graph"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:textColor="#2196F3"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="8dp"/>
+                android:paddingLeft="16dp" />
 
         </LinearLayout>
-        <EditText
-            android:id="@+id/edtName"
-            android:hint=" Expense Name"
-            android:inputType="text"
-            android:autofillHints="0"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/edtAmount"
-            android:hint="Amount"
-            android:inputType="numberDecimal"
-            android:textSize="20sp"
-            android:autofillHints="0"
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#E3F2FD"
+            android:padding="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/edtCategory"
-            android:hint="Category"
-            android:autofillHints="0"
-            android:textSize="20sp"
-            android:inputType="text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtName"
+                android:hint=" Expense Name"
+                android:inputType="text"
+                android:padding="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/edtDate"
-            android:hint="Date (YYYY-MM-DD)"
-            android:inputType="date"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtAmount"
+                android:hint="Amount"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:text="Update Expense"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/blue"
-            android:textColor="@android:color/white"
+            <EditText
+                android:id="@+id/edtCategory"
+                android:hint="Category"
+                android:inputType="text"
+                android:padding="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtDate"
+                android:hint="Date (YYYY-MM-DD)"
+                android:inputType="date"
+                android:padding="16dp"
+                android:background="@drawable/rounded_edittext"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:text="Update Expense"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:backgroundTint="@color/blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:backgroundTint="#E3F2FD"
+            android:gravity="bottom"
+            android:layout_marginTop="150dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent">
+        </FrameLayout>
 
     </LinearLayout>
 </ScrollView>
