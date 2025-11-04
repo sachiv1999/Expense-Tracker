@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.*;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class EditExpenseActivity extends AppCompatActivity {
     EditText edtName, edtAmount, edtCategory, edtDate;
@@ -19,13 +21,23 @@ public class EditExpenseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_expense);
-// Initialize views
+        
+        // Initialize views
         edtName = findViewById(R.id.edtName);
         edtAmount = findViewById(R.id.edtAmount);
         edtCategory = findViewById(R.id.edtCategory);
         edtDate = findViewById(R.id.edtDate);
         btnUpdate = findViewById(R.id.btnUpdate);
         imageButton = findViewById(R.id.imageButton);
+
+        // Load ExampleFragment
+        Expense_bottom fragment = new Expense_bottom();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        // Begin and commit transaction
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
