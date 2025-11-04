@@ -12,7 +12,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
-
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -24,7 +23,6 @@ import java.util.Map;
 public class ExpenseGraph extends AppCompatActivity {
 
     ImageButton imageButton;
-    //private BarChart barChart;
     private PieChart pieChart;
     private DBHelper dbHelper;
 
@@ -58,7 +56,7 @@ public class ExpenseGraph extends AppCompatActivity {
         transaction.commit();
 
 
-       loadExpenseData();
+        loadExpenseData();
     }
 
 
@@ -67,7 +65,6 @@ public class ExpenseGraph extends AppCompatActivity {
         Map<String, Float> categoryMap = dbHelper.getCategoryTotals();
         setupPieChart(categoryMap);
     }
-
 
     private void setupPieChart(Map<String, Float> categoryMap) {
         ArrayList<PieEntry> entries = new ArrayList<>();
