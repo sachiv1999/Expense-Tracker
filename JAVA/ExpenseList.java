@@ -14,6 +14,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 
@@ -33,6 +35,15 @@ public class ExpenseList extends AppCompatActivity {
         spinnerFilter = findViewById(R.id.spinnerFilter);
         tvTotalExpense = findViewById(R.id.tvTotalExpense);
         imageButton = findViewById(R.id.imageButton);
+
+        // Load ExampleFragment
+        Expense_bottom fragment = new Expense_bottom();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        // Begin and commit transaction
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        transaction.commit();
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
