@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Your fragment content above -->
+
+
+    <!-- Bottom layout with 3 ImageButtons -->
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="#fff"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btnlist"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="Home"
+            android:src="@drawable/list" />
+
+        <ImageButton
+            android:id="@+id/btnadd"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/add"
+            android:contentDescription="Search" />
+
+        <ImageButton
+            android:id="@+id/btngraph"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/graph"
+            android:contentDescription="Profile" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

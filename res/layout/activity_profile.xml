@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="#fff">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#fff"
+            android:paddingRight="20dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="@string/my_profile"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:paddingRight="20dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgResult"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtMobile"
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:padding="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Edit Profile"-->
+<!--        android:backgroundTint="@color/blue"-->
+<!--        android:layout_margin="8dp"-->
+<!--        android:textColor="#FFF"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_marginTop="8dp"/>-->
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:backgroundTint="@color/blue"
+        android:layout_margin="8dp"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
